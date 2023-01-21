@@ -1,0 +1,32 @@
+.Navbar {
+  @apply w-full py-6 px-16 fixed z-50;
+
+  &--sticky {
+    @apply bg-white;
+  }
+
+  &__container {
+    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,auto,1fr] gap-x-16 items-center;
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+  }
+
+  &__list {
+    @apply flex items-center;
+  }
+
+  &__item {
+    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-100;
+  }
+
+  &__item-link {
+  }
+
+  &__button-link {
+    @apply w-fit ml-auto block;
+  }
+}

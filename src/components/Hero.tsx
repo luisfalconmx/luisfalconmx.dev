@@ -6,11 +6,11 @@ type Props = {
 }
 
 const Hero = ({ image, title, headline, description }: Props) => (
-  <section className="bg-dark-400 text-white min-h-[894px] flex relative overflow-hidden">
+  <section className="bg-dark-400 text-white min-h-[790px] flex relative overflow-hidden">
     <div className="max-w-[1170px] mx-auto my-auto relative z-10">
       <img className="block mx-auto" src={image} alt={title} />
       <div className="max-w-[600px] mx-auto text-center mt-7">
-        <h1 className="max-w-[390px] mx-auto text-5xl font-extrabold mb-4">
+        <h1 className="max-w-[480px] mx-auto text-6xl font-extrabold mb-4 font-manrope leading-[72px]">
           {title}
         </h1>
         {headline && (

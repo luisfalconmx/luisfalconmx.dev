@@ -16,6 +16,9 @@ module.exports = {
           400: '#060A11'
         }
       },
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif']
+      },
       boxShadow: {
         custom: '0px 4px 24px rgba(0, 0, 0, 0.08);'
       }
