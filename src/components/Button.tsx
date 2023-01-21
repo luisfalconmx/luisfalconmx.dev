@@ -1,4 +1,3 @@
-import Icon from '../assets/icons/icon-arrow.svg'
 import type { ReactNode } from 'react'
 
 type Props = {
