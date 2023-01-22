@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Button from '../Button'
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo.svg'
 import './Navbar.css'
 
 type NavbarLinks = {
@@ -46,14 +46,19 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    console.log('useEffect')
+    toggleSticky()
     window.addEventListener('scroll', () => toggleSticky())
   }, [])
 
   return (
     <header className={`Navbar ${sticky && 'Navbar--sticky'}`}>
       <div className="Navbar__container">
-        <img className="Navbar__logo" src={Logo} alt="luisfalconmx logo" />
+        <img
+          width="160px"
+          className="Navbar__logo"
+          src={Logo}
+          alt="luisfalconmx logo"
+        />
         <nav className="Navbar__nav">
           <ul className="Navbar__list">
             {links.map(({ href, title }, key) => (
@@ -66,7 +71,12 @@ const Navbar = () => {
           </ul>
         </nav>
         <a href="/contact" className="Navbar__button-link">
-          <Button>Contact</Button>
+          <Button
+            type="transparent"
+            className={sticky ? 'Navbar__button--sticky' : ''}
+          >
+            Contact
+          </Button>
         </a>
       </div>
     </header>
