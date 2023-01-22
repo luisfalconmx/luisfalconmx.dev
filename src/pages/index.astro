@@ -1,9 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero'
+import ProfilePicture from '../assets/images/profile.png'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="luisfalconmx - Frontend Developer">
   <main>
-    <h1 class="text-2xl font-bold text-indigo-600">Welcome to luisfalconmx</h1>
+    <Hero
+      image={ProfilePicture}
+      title="👋 Hey there, It's Luis Falcon."
+      headline="Frontend Developer"
+      description="I'm passionate about JavaScript, open source projects and the dev communities."
+    />
   </main>
 </Layout>
