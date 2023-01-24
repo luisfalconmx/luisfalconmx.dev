@@ -1,35 +1,8 @@
 import { useState, useEffect } from 'react'
 import Button from '../Button'
 import Logo from '../../assets/images/logo.svg'
+import mainMenu from '../../data/mainMenu'
 import './Navbar.css'
-
-type NavbarLinks = {
-  title: string
-  href: string
-}[]
-
-const links: NavbarLinks = [
-  {
-    title: 'home',
-    href: '/'
-  },
-  {
-    title: 'projects',
-    href: 'projects'
-  },
-  {
-    title: 'blog',
-    href: '/blog'
-  },
-  {
-    title: 'GitHub',
-    href: 'https://github.com/luisfalconmx'
-  },
-  {
-    title: 'linkedIn',
-    href: 'https://www.linkedin.com/in/luisfalconmx'
-  }
-]
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false)
@@ -61,7 +34,7 @@ const Navbar = () => {
         />
         <nav className="Navbar__nav">
           <ul className="Navbar__list">
-            {links.map(({ href, title }, key) => (
+            {mainMenu.map(({ href, title }, key) => (
               <li key={key} className="Navbar__item">
                 <a className="Navbar__item-link" href={href}>
                   {title}

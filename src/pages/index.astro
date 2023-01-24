@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero'
 import ProfilePicture from '../assets/images/profile.png'
+import ProjectCard from '../components/ProjectCard'
+import ProjectCardImage from '../assets/images/project-card-image.png'
 ---
 
 <Layout title="luisfalconmx - Frontend Developer">
@@ -12,5 +14,106 @@ import ProfilePicture from '../assets/images/profile.png'
       headline="Frontend Developer"
       description="I'm passionate about JavaScript, open source projects and the dev communities."
     />
+    <section
+      class="grid grid-cols-[repeat(4,auto)] gap-x-8 2xl:gap-x-16 max-w-[1170px] mx-auto pt-28 pb-20 border-b border-dark-100"
+    >
+      <div>
+        <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
+          >80+</b
+        >
+        <strong
+          class="block uppercase font-bold font-manrope text-xl text-dark-300"
+          >Certifications</strong
+        >
+      </div>
+      <div>
+        <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
+          >13</b
+        >
+        <strong
+          class="block uppercase font-bold font-manrope text-xl text-dark-300"
+          >Projects</strong
+        >
+      </div>
+      <div>
+        <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
+          >3+</b
+        >
+        <strong
+          class="block uppercase font-bold font-manrope text-xl text-dark-300"
+          >Years of experience</strong
+        >
+      </div>
+      <div>
+        <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
+          >12+</b
+        >
+        <strong
+          class="block uppercase font-bold font-manrope text-xl text-dark-300"
+          >Blog posts</strong
+        >
+      </div>
+    </section>
+    <section class="mt-20">
+      <h2
+        class="text-center font-manrope font-extrabold text-5xl text-dark-400 mb-24"
+      >
+        Latest projects 🌈
+      </h2>
+      <div
+        class="grid grid-cols-3 gap-x-6 gap-y-8 my-20 mx-auto max-w-[1080px]"
+      >
+        <ProjectCard
+          type="large"
+          title="Fashion Blog Website"
+          headline="UI, UX Project"
+          link="#"
+          image={ProjectCardImage}
+          color="#FFEFB5"
+          gridSpan={3}
+        />
+        <ProjectCard
+          type="medium"
+          title="Datasoft Web & Application Design"
+          headline="Product Design"
+          link="#"
+          image={ProjectCardImage}
+          color="#E5F1FF"
+          gridSpan={2}
+        />
+        <ProjectCard
+          type="small"
+          title="Movie Time IOS App Development"
+          headline="Mobile App"
+          link="#"
+          colorScheme="light"
+          buttonText="View Project"
+          image={ProjectCardImage}
+          color="#E5F1FF"
+          gridSpan={1}
+        />
+        <ProjectCard
+          type="small"
+          title="User Data Collects for Movie App"
+          headline="Mobile App"
+          link="#"
+          colorScheme="light"
+          buttonText="View Project"
+          image={ProjectCardImage}
+          color="#E5F1FF"
+          gridSpan={1}
+        />
+        <ProjectCard
+          type="medium"
+          title="Jewelry Website Redesign."
+          headline="Web Site Design"
+          link="#"
+          image={ProjectCardImage}
+          colorScheme="light"
+          color="#5960ff"
+          gridSpan={2}
+        />
+      </div>
+    </section>
   </main>
 </Layout>
