@@ -9,6 +9,10 @@
     @apply text-dark-400;
   }
 
+  &--sticky &__item:hover {
+    @apply text-dark-300;
+  }
+
   &--sticky &__logo {
     @apply filter invert;
   }
@@ -32,11 +36,12 @@
     @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-100;
 
     &:hover {
-      @apply text-dark-50;
+      @apply text-dark-50 underline;
     }
   }
 
   &__item-link {
+    @apply cursor-pointer;
   }
 
   &__button--sticky {

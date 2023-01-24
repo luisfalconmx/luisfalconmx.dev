@@ -42,6 +42,6 @@
   }
 
   &__item-link {
-    @apply cursor-pointer text-dark-300;
+    @apply cursor-pointer text-dark-300 hover:underline;
   }
 }
