@@ -2,12 +2,12 @@ import type { ReactNode } from 'react'
 import './Button.css'
 
 type Props = {
-  type?: 'normal' | 'transparent'
+  type?: 'primary' | 'secondary' | 'transparent'
   children: ReactNode
   className?: string
 }
 
-const Button = ({ type = 'normal', children, className }: Props) => {
+const Button = ({ type = 'primary', children, className }: Props) => {
   return (
     <button className={`Button Button--${type} ${className}`}>
       {children}

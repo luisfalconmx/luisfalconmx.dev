@@ -1,11 +1,15 @@
 .Button {
   @apply py-[14px] px-[22px] font-sans font-bold leading-6 rounded-lg first-letter:uppercase cursor-pointer;
 
-  &--normal {
+  &--primary {
     @apply bg-dark-400 text-white;
   }
 
   &--transparent {
     @apply bg-neutral-50 bg-opacity-5 text-white;
+  }
+
+  &--secondary {
+    @apply bg-transparent text-dark-400 border border-dark-400;
   }
 }

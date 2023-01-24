@@ -1,0 +1,95 @@
+/* Large Variant */
+.ProjectCard {
+  &--large {
+    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden;
+  }
+
+  &--large &__content {
+    @apply pb-20 items-end max-h-fit place-self-end mt-auto;
+  }
+
+  &--large &__title {
+    @apply font-manrope font-extrabold text-5xl text-dark-400 mb-5 leading-[3.75rem];
+  }
+
+  &--large &__headline {
+    @apply block font-normal text-dark-300 text-base mb-20;
+  }
+
+  &--large &__image {
+    @apply block w-full max-h-[480px] object-cover shadow-custom place-self-end mt-auto;
+  }
+}
+
+/* Medium Variant */
+.ProjectCard {
+  &--medium {
+    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden;
+  }
+
+  &--medium &__content {
+    @apply pb-20 items-end max-h-fit place-self-end mt-auto;
+  }
+
+  &--medium &__title {
+    @apply font-manrope font-extrabold text-2xl text-dark-400 mb-5 leading-7;
+  }
+
+  &--medium &__headline {
+    @apply block font-normal text-dark-300 text-base mb-10;
+  }
+
+  &--medium &__image {
+    @apply shadow-custom place-self-end mt-auto;
+  }
+}
+
+/* Small Variant */
+.ProjectCard {
+  &--small {
+    @apply relative max-w-[370px] w-full min-h-[360px] overflow-hidden;
+  }
+
+  &--small &__content {
+    @apply relative w-full h-full z-10 justify-end max-h-fit place-self-end mt-auto bg-[#004aff] bg-opacity-60 px-16 pb-20 pt-3 flex flex-col;
+  }
+
+  &--small &__title {
+    @apply font-semibold text-center text-xl text-dark-50 mb-3 leading-6;
+  }
+
+  &--small &__headline {
+    @apply block font-normal text-dark-50 text-base mb-10 text-center;
+  }
+
+  &--small &__button {
+    @apply block mx-auto;
+  }
+
+  &--small &__image {
+    @apply absolute top-0 left-0 w-full h-full object-cover shadow-custom place-self-end mt-auto;
+  }
+}
+
+/* Global */
+.ProjectCard {
+  &--light &__title,
+  &--light &__headline,
+  &--light &__button {
+    @apply text-dark-50;
+  }
+
+  &--light &__button {
+    @apply border-dark-50;
+  }
+
+  &--dark &__title,
+  &--dark &__headline,
+  &--dark &__button {
+    @apply text-dark-400;
+  }
+
+  &--dark &__button {
+    @apply border-dark-400;
+  }
+}
