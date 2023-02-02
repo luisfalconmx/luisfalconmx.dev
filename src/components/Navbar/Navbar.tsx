@@ -1,19 +1,34 @@
 import { useState, useEffect } from 'react'
 import Button from '../Button'
 import Logo from '../../assets/images/logo.svg'
-import mainMenu from '../../data/mainMenu'
+import type { Menu } from '../../types/Menu'
 import './Navbar.css'
 
-const Navbar = () => {
+type Props = {
+  variant: 'normal' | 'transparent'
+  logoUrl?: string
+  links: Menu
+  buttonLink: string
+  buttonText: string
+}
+
+const Navbar = ({
+  variant = 'normal',
+  logoUrl,
+  links,
+  buttonLink,
+  buttonText
+}: Props) => {
   const [sticky, setSticky] = useState(false)
-  const trigger = 50
+  const [siteUrl, setSiteUrl] = useState(logoUrl)
 
   const toggleSticky = () => {
-    if (window.pageYOffset > trigger) {
-      console.log('activar sticky')
+    const stickyTrigger = 150
+    const getScroll = window.scrollY
+
+    if (getScroll > stickyTrigger) {
       setSticky(true)
     } else {
-      console.log('desactivar sticky')
       setSticky(false)
     }
   }
@@ -21,34 +36,45 @@ const Navbar = () => {
   useEffect(() => {
     toggleSticky()
     window.addEventListener('scroll', () => toggleSticky())
+
+    if (!logoUrl) {
+      const fullSiteUrl = document.location.origin
+      setSiteUrl(fullSiteUrl)
+    }
   }, [])
 
   return (
-    <header className={`Navbar ${sticky && 'Navbar--sticky'}`}>
+    <header
+      className={`Navbar Navbar--${variant} ${sticky && 'Navbar--sticky'}`}
+      id="navbar"
+    >
       <div className="Navbar__container">
-        <img
-          width="160px"
-          className="Navbar__logo"
-          src={Logo}
-          alt="luisfalconmx logo"
-        />
+        <a href={siteUrl}>
+          <img
+            width="160px"
+            className="Navbar__logo"
+            src={Logo}
+            alt="luisfalconmx logo"
+          />
+        </a>
         <nav className="Navbar__nav">
           <ul className="Navbar__list">
-            {mainMenu.map(({ href, title }, key) => (
-              <li key={key} className="Navbar__item">
-                <a className="Navbar__item-link" href={href}>
-                  {title}
-                </a>
-              </li>
-            ))}
+            {links &&
+              links.map(({ href, title }, key) => (
+                <li key={key} className="Navbar__item">
+                  <a className="Navbar__item-link" href={href}>
+                    {title}
+                  </a>
+                </li>
+              ))}
           </ul>
         </nav>
-        <a href="/contact" className="Navbar__button-link">
+        <a href={buttonLink} className="Navbar__button-link">
           <Button
-            type="transparent"
+            type="secondary"
             className={sticky ? 'Navbar__button--sticky' : ''}
           >
-            Contact
+            {buttonText}
           </Button>
         </a>
       </div>

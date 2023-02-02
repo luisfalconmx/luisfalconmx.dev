@@ -1,7 +1,46 @@
 .Navbar {
-  @apply w-full py-7 px-16 fixed z-50 transition-all duration-200;
+  @apply w-full py-7 px-16 sticky z-50 transition-all duration-200 bg-white shadow-custom;
+
+  &__container {
+    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center;
+  }
+
+  &__logo {
+    @apply w-[160px] filter invert;
+  }
+
+  &__nav {
+  }
+
+  &__list {
+    @apply flex items-center;
+  }
+
+  &__item {
+    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-300;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+
+  &__item-link {
+    @apply cursor-pointer;
+  }
+
+  &__button {
+    @apply bg-dark-50 border border-dark-100 text-dark-400;
+  }
+
+  &__button-link {
+    @apply w-fit ml-auto block;
+  }
 
   &--sticky {
+    @apply py-3 top-0;
+  }
+
+  /* &--sticky {
     @apply bg-white py-3 transition-all duration-300 shadow-custom;
   }
 
@@ -15,40 +54,5 @@
 
   &--sticky &__logo {
     @apply filter invert;
-  }
-
-  &__container {
-    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center;
-  }
-
-  &__logo {
-    @apply w-[160px];
-  }
-
-  &__nav {
-  }
-
-  &__list {
-    @apply flex items-center;
-  }
-
-  &__item {
-    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-100;
-
-    &:hover {
-      @apply text-dark-50 underline;
-    }
-  }
-
-  &__item-link {
-    @apply cursor-pointer;
-  }
-
-  &__button--sticky {
-    @apply bg-dark-50 border border-dark-100 text-dark-400;
-  }
-
-  &__button-link {
-    @apply w-fit ml-auto block;
-  }
+  } */
 }
