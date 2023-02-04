@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import mainMenu from '../data/mainMenu'
 
 export interface Props {
   title: string
@@ -33,7 +34,6 @@ const { title } = Astro.props
     />
   </head>
   <body>
-    <Navbar client:load />
     <slot />
     <Footer />
   </body>

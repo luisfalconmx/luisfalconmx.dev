@@ -1,6 +1,10 @@
+# vscode user settings
+.vscode/settings.json
+
 # build output
 dist/
 .output/
+.astro/
 
 # dependencies
 node_modules/
