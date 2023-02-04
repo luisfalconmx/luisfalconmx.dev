@@ -1,7 +1,0 @@
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "material-icon-theme.folders.associations": {
-    "blog": "markdown"
-  }
-}

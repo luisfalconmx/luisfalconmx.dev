@@ -1,3 +1,6 @@
+# vscode user settings
+.vscode/settings.json
+
 # build output
 dist/
 .output/
