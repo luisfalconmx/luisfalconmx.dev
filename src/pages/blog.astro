@@ -21,7 +21,7 @@ const allBlogPosts = await getCollection('blog')
     {
       allBlogPosts.map((item) => (
         <li>
-          <a href={item.slug}>{item.data.title}</a>
+          <a href={`blog/${item.slug}`}>{item.data.title}</a>
         </li>
       ))
     }
