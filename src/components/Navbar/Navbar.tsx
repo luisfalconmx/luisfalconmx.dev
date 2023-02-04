@@ -23,7 +23,7 @@ const Navbar = ({
   const [siteUrl, setSiteUrl] = useState(logoUrl)
 
   const toggleSticky = () => {
-    const stickyTrigger = 150
+    const stickyTrigger = 100
     const getScroll = window.scrollY
 
     if (getScroll > stickyTrigger) {
@@ -70,10 +70,7 @@ const Navbar = ({
           </ul>
         </nav>
         <a href={buttonLink} className="Navbar__button-link">
-          <Button
-            type="secondary"
-            className={sticky ? 'Navbar__button--sticky' : ''}
-          >
+          <Button type="secondary" className="Navbar__button">
             {buttonText}
           </Button>
         </a>

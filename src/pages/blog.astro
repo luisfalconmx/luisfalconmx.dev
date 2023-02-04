@@ -1,11 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar'
+import mainMenu from '../data/mainMenu'
 import { getCollection } from 'astro:content'
 const title = 'Blog - luisfalconmx'
 const allBlogPosts = await getCollection('blog')
 ---
 
 <Layout title={title}>
+  <Navbar
+    variant="normal"
+    links={mainMenu}
+    buttonLink="/contact"
+    buttonText="Contact Us"
+    client:load
+  />
   <h1>{title}</h1>
   <p>This is where I will post about my journey learning Astro.</p>
   <ul>

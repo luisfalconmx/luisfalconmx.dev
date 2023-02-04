@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar'
+import mainMenu from '../data/mainMenu'
 import Hero from '../components/Hero'
 import ProfilePicture from '../assets/images/profile.png'
 import ProjectCard from '../components/ProjectCard'
@@ -7,6 +9,13 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
 ---
 
 <Layout title="luisfalconmx - Frontend Developer">
+  <Navbar
+    variant="transparent"
+    links={mainMenu}
+    buttonLink="/contact"
+    buttonText="Contact Us"
+    client:load
+  />
   <main>
     <Hero
       image={ProfilePicture}

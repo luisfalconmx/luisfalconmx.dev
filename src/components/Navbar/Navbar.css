@@ -1,5 +1,5 @@
 .Navbar {
-  @apply w-full py-7 px-16 sticky z-50 transition-all duration-200 bg-white shadow-custom;
+  @apply w-full py-3 px-16 sticky z-50 transition-all duration-200 bg-white shadow-custom;
 
   &__container {
     @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center;
@@ -29,30 +29,49 @@
   }
 
   &__button {
-    @apply bg-dark-50 border border-dark-100 text-dark-400;
+    @apply bg-transparent;
   }
 
   &__button-link {
     @apply w-fit ml-auto block;
   }
 
+  /* TRANSPARENT VARIATION */
+  &--transparent {
+    @apply bg-transparent fixed top-0 shadow-none;
+  }
+
+  &--transparent &__logo {
+    @apply filter invert-0;
+  }
+
+  &--transparent &__item {
+    @apply text-dark-50;
+  }
+
+  &--transparent &__button {
+    @apply border-dark-50 text-dark-50;
+  }
+
+  /* STICKY VARIATION */
+
   &--sticky {
-    @apply py-3 top-0;
+    @apply top-0;
   }
 
-  /* &--sticky {
-    @apply bg-white py-3 transition-all duration-300 shadow-custom;
+  &--sticky&--transparent {
+    @apply bg-white shadow-custom;
   }
 
-  &--sticky &__item {
-    @apply text-dark-400;
+  &--sticky&--transparent &__logo {
+    @apply invert;
   }
 
-  &--sticky &__item:hover {
+  &--sticky&--transparent &__item {
     @apply text-dark-300;
   }
 
-  &--sticky &__logo {
-    @apply filter invert;
-  } */
+  &--sticky&--transparent &__button {
+    @apply border-dark-300 text-dark-300;
+  }
 }
