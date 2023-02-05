@@ -17,7 +17,7 @@
   }
 
   &--large &__image {
-    @apply block w-full max-h-[480px] object-cover shadow-custom place-self-end mt-auto;
+    @apply block w-full max-h-[420px] object-cover shadow-custom place-self-end mt-auto;
   }
 }
 

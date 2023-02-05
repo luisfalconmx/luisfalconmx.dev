@@ -3,7 +3,10 @@ import './ProjectCard.css'
 
 type Props = {
   type?: 'large' | 'medium' | 'small'
-  image: string
+  image: {
+    src: string
+    alt: string
+  }
   title: string
   headline: string
   link: string
@@ -47,7 +50,7 @@ const ProjectCard = ({
           </Button>
         </a>
       </div>
-      <img src={image} alt={title} className="ProjectCard__image" />
+      <img src={image.src} alt={image.alt} className="ProjectCard__image" />
     </div>
   )
 }

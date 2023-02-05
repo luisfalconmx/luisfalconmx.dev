@@ -8,6 +8,8 @@ const projectSchema = defineCollection({
     task: z.string(),
     publishDate: z.string().transform((str) => new Date(str)),
     link: z.string().url(),
+    color: z.string(),
+    colorScheme: z.enum(["light", "dark"]),
     previewImage: z.object({
       src: z.string(),
       alt: z.string()
