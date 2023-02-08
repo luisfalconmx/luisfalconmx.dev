@@ -1,11 +1,14 @@
 ---
 import { getCollection } from 'astro:content'
+import getProjects from '../utils/getProjects'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero'
 import ProfilePicture from '../assets/images/profile.png'
 import ProjectCard from '../components/ProjectCard'
+import GridProjects from '../components/GridProjects'
 
-const projects = await getCollection('projects')
+const projects = await getProjects(5);
+
 const posts = await getCollection('blog')
 const yearsOfExperience = 3
 ---
@@ -67,63 +70,19 @@ const yearsOfExperience = 3
       >
         Latest projects 🌈
       </h2>
-      <div
-        class="grid grid-cols-3 gap-x-6 gap-y-8 my-20 mx-auto max-w-[1080px]"
-      >
-        {projects.map(project => (
-          <ProjectCard
-            type="large"
-            title={project.data.name}
-            headline={project.data.caption}
-            link={`projects/${project.slug}`}
-            image={project.data.previewImage}
-            color={project.data.color}
-            colorScheme={project.data.colorScheme}
-            gridSpan={3}
-          />
+      <GridProjects>
+        {projects.map((project) => (
+            <ProjectCard
+              type={project.data.type}
+              title={project.data.name}
+              headline={project.data.caption}
+              link={`projects/${project.slug}`}
+              image={project.data.previewImage}
+              color={project.data.color}
+              colorScheme={project.data.colorScheme}
+            />
         ))}
-        <!-- <ProjectCard
-          type="medium"
-          title="Datasoft Web & Application Design"
-          headline="Product Design"
-          link="#"
-          image={ProjectCardImage}
-          color="#E5F1FF"
-          gridSpan={2}
-        />
-        <ProjectCard
-          type="small"
-          title="Movie Time IOS App Development"
-          headline="Mobile App"
-          link="#"
-          colorScheme="light"
-          buttonText="View Project"
-          image={ProjectCardImage}
-          color="#E5F1FF"
-          gridSpan={1}
-        />
-        <ProjectCard
-          type="small"
-          title="User Data Collects for Movie App"
-          headline="Mobile App"
-          link="#"
-          colorScheme="light"
-          buttonText="View Project"
-          image={ProjectCardImage}
-          color="#E5F1FF"
-          gridSpan={1}
-        />
-        <ProjectCard
-          type="medium"
-          title="Jewelry Website Redesign."
-          headline="Web Site Design"
-          link="#"
-          image={ProjectCardImage}
-          colorScheme="light"
-          color="#5960ff"
-          gridSpan={2}
-        /> -->
-      </div>
+      </GridProjects>
     </section>
   </main>
 </Layout>

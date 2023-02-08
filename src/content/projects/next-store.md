@@ -1,12 +1,12 @@
 ---
-name: 'The Bouncing Koala'
+name: 'Next Store'
 caption: 'Official website for The Bouncing Koala'
-client: "Ana d'Argence"
+client: "luisfalconmx"
 task: "UI Design, Web Development, Visual Design"
-publishDate: '2023-02-01'
+publishDate: '2022-01-11'
 link: 'https://thebouncingkoala.vercel.app'
-color: "#8B5CF6"
-colorScheme: "light"
+color: "#90e0ef"
+colorScheme: "dark"
 previewImage:
   src: 'https://jackcreative.staticmania.com/images/project/project-1.png'
   alt: 'The bouncing koala project preview'

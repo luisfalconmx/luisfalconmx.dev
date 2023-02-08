@@ -1,11 +1,11 @@
 /* Large Variant */
 .ProjectCard {
   &--large {
-    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden;
+    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden col-span-3;
   }
 
   &--large &__content {
-    @apply pb-20 items-end max-h-fit place-self-end mt-auto;
+    @apply pb-20 items-end max-h-fit mt-auto;
   }
 
   &--large &__title {
@@ -24,7 +24,7 @@
 /* Medium Variant */
 .ProjectCard {
   &--medium {
-    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden;
+    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden col-span-2;
   }
 
   &--medium &__content {
@@ -47,7 +47,7 @@
 /* Small Variant */
 .ProjectCard {
   &--small {
-    @apply relative max-w-[370px] w-full min-h-[360px] overflow-hidden;
+    @apply relative max-w-[370px] w-full min-h-[360px] overflow-hidden col-span-1;
   }
 
   &--small &__content {

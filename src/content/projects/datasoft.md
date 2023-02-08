@@ -1,14 +1,14 @@
 ---
-name: 'The Bouncing Koala'
-caption: 'Official website for The Bouncing Koala'
-client: "Ana d'Argence"
+name: 'Datasoft Web App Design'
+caption: 'Product Design'
+client: "luisfalconmx"
 task: "UI Design, Web Development, Visual Design"
-publishDate: '2023-02-01'
+publishDate: '2022-01-21'
 link: 'https://thebouncingkoala.vercel.app'
-color: "#8B5CF6"
-colorScheme: "light"
+color: "#e6f1ff"
+colorScheme: "dark"
 previewImage:
-  src: 'https://jackcreative.staticmania.com/images/project/project-1.png'
+  src: 'https://jackcreative.staticmania.com/images/project/project-2.png'
   alt: 'The bouncing koala project preview'
 featuredImage:
   src: 'https://media.licdn.com/dms/image/C4E16AQFDFKfA6yrjQg/profile-displaybackgroundimage-shrink_200_800/0/1654300215325?e=2147483647&v=beta&t=2iAV0PzHG6RvD3_K7d5b7v6dmKm8s-YXbzgAdf_yMco'
