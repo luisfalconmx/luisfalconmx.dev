@@ -1,21 +1,19 @@
 ---
+import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
-import Navbar from '../components/Navbar'
-import mainMenu from '../data/mainMenu'
 import Hero from '../components/Hero'
 import ProfilePicture from '../assets/images/profile.png'
 import ProjectCard from '../components/ProjectCard'
-import ProjectCardImage from '../assets/images/project-card-image.png'
+
+const projects = await getCollection('projects')
+const posts = await getCollection('blog')
+const yearsOfExperience = 3
 ---
 
-<Layout title="luisfalconmx - Frontend Developer">
-  <Navbar
-    variant="transparent"
-    links={mainMenu}
-    buttonLink="/contact"
-    buttonText="Contact Us"
-    client:load
-  />
+<Layout
+  title="luisfalconmx - Frontend Developer"
+  navbarVariant="transparent"
+>
   <main>
     <Hero
       image={ProfilePicture}
@@ -37,7 +35,7 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
       </div>
       <div>
         <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
-          >13</b
+          >{projects.length}</b
         >
         <strong
           class="block uppercase font-bold font-manrope text-xl text-dark-300"
@@ -46,7 +44,7 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
       </div>
       <div>
         <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
-          >3+</b
+          >{yearsOfExperience}+</b
         >
         <strong
           class="block uppercase font-bold font-manrope text-xl text-dark-300"
@@ -55,7 +53,7 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
       </div>
       <div>
         <b class="block font-manrope text-6xl font-normal mb-3 text-dark-400"
-          >12+</b
+          >{posts.length}</b
         >
         <strong
           class="block uppercase font-bold font-manrope text-xl text-dark-300"
@@ -72,16 +70,19 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
       <div
         class="grid grid-cols-3 gap-x-6 gap-y-8 my-20 mx-auto max-w-[1080px]"
       >
-        <ProjectCard
-          type="large"
-          title="Fashion Blog Website"
-          headline="UI, UX Project"
-          link="#"
-          image={ProjectCardImage}
-          color="#FFEFB5"
-          gridSpan={3}
-        />
-        <ProjectCard
+        {projects.map(project => (
+          <ProjectCard
+            type="large"
+            title={project.data.name}
+            headline={project.data.caption}
+            link={`projects/${project.slug}`}
+            image={project.data.previewImage}
+            color={project.data.color}
+            colorScheme={project.data.colorScheme}
+            gridSpan={3}
+          />
+        ))}
+        <!-- <ProjectCard
           type="medium"
           title="Datasoft Web & Application Design"
           headline="Product Design"
@@ -121,7 +122,7 @@ import ProjectCardImage from '../assets/images/project-card-image.png'
           colorScheme="light"
           color="#5960ff"
           gridSpan={2}
-        />
+        /> -->
       </div>
     </section>
   </main>

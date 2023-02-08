@@ -17,6 +17,25 @@ const { Content } = await project.render()
 ---
 
 <Layout title={project.data.title}>
-  <h1>{project.data.title}</h1>
+  <h1>{project.data.name}</h1>
+  <div>
+    <div>
+      <b>Client</b>
+      <p>{project.data.client}</p>
+    </div>
+    <div>
+      <b>Task</b>
+      <p>{project.data.task}</p>
+    </div>
+    <div>
+      <b>Time</b>
+      <p>{project.data.time}</p>
+    </div>
+    <div>
+      <b>Work Link</b>
+      <p>{project.data.link}</p>
+    </div>
+  </div>
+  <img class="w-full mb-28" src={project.data.featuredImage.src} alt={project.data.featuredImage.alt} />
   <Content />
 </Layout>
