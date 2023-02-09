@@ -17,7 +17,7 @@
   }
 
   &--large &__image {
-    @apply block w-full max-h-[420px] object-cover shadow-custom place-self-end mt-auto;
+    @apply block w-full max-h-[420px] h-[420px] object-cover shadow-custom place-self-end mt-auto;
   }
 }
 
@@ -40,7 +40,7 @@
   }
 
   &--medium &__image {
-    @apply shadow-custom place-self-end mt-auto;
+    @apply shadow-custom place-self-end mt-auto h-[320px] w-full;
   }
 }
 
@@ -79,8 +79,6 @@
     @apply text-dark-50;
   }
 
-
-
   &--light &__button {
     @apply border-dark-50;
   }
@@ -94,7 +92,7 @@
   &--dark &__button {
     @apply border-dark-400;
   }
-  
+
   &--small &__title,
   &--small &__headline,
   &--small &__button {

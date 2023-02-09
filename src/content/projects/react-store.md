@@ -1,14 +1,14 @@
 ---
 name: 'React Store'
-caption: 'Official website for The Bouncing Koala'
-client: "luisfalconmx"
-task: "UI Design, Web Development, Visual Design"
+caption: 'Single Page Application created with React JS'
+client: 'luisfalconmx'
+task: 'UI Design, Web Development, Visual Design'
 publishDate: '2022-01-19'
 link: 'https://thebouncingkoala.vercel.app'
-color: "#90e0ef"
-colorScheme: "dark"
+color: '#5960ff'
+colorScheme: 'light'
 previewImage:
-  src: 'https://jackcreative.staticmania.com/images/project/project-1.png'
+  src: 'https://jackcreative.staticmania.com/images/project/project-5.png'
   alt: 'The bouncing koala project preview'
 featuredImage:
   src: 'https://media.licdn.com/dms/image/C4E16AQFDFKfA6yrjQg/profile-displaybackgroundimage-shrink_200_800/0/1654300215325?e=2147483647&v=beta&t=2iAV0PzHG6RvD3_K7d5b7v6dmKm8s-YXbzgAdf_yMco'
