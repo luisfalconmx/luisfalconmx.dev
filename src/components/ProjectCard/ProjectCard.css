@@ -51,7 +51,7 @@
   }
 
   &--small &__content {
-    @apply relative w-full h-full z-10 justify-end max-h-fit place-self-end mt-auto bg-[#004aff] bg-opacity-60 px-16 pb-20 pt-3 flex flex-col;
+    @apply relative w-full h-full z-10 justify-end max-h-fit place-self-end mt-auto bg-[#004aff] bg-opacity-80 px-16 pb-20 pt-3 flex flex-col;
   }
 
   &--small &__title {
@@ -63,7 +63,7 @@
   }
 
   &--small &__button {
-    @apply block mx-auto;
+    @apply block mx-auto w-fit shadow;
   }
 
   &--small &__image {
@@ -79,6 +79,8 @@
     @apply text-dark-50;
   }
 
+
+
   &--light &__button {
     @apply border-dark-50;
   }
@@ -91,5 +93,15 @@
 
   &--dark &__button {
     @apply border-dark-400;
+  }
+  
+  &--small &__title,
+  &--small &__headline,
+  &--small &__button {
+    @apply text-white;
+  }
+
+  &--small &__button {
+    @apply border-white;
   }
 }

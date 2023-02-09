@@ -25,7 +25,7 @@ const ProjectCard = ({
   target = '_self',
   colorScheme = 'dark',
   buttonText = 'Case study',
-  color = '#FFEFB5',
+  color = '#FFEFB5'
 }: Props) => {
   const cardType = `ProjectCard--${type}`
 
@@ -35,7 +35,7 @@ const ProjectCard = ({
     <div
       className={`ProjectCard ${cardType} ${colorPreference}`}
       style={{
-        backgroundColor: color,
+        backgroundColor: color
       }}
     >
       <div className="ProjectCard__content">
