@@ -1,19 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getCollection } from 'astro:content'
-const title = 'Projects - luisfalconmx'
-const allProjects = await getCollection('projects')
+import getProjects from '../utils/getProjects'
+import ProjectCard from '../components/ProjectCard'
+import GridProjects from '../components/GridProjects'
+const projects = await getProjects()
 ---
 
-<Layout title={title}>
-  <h1>{title}</h1>
-  <ul>
+<Layout title="Projects - luisfalconmx">
+  <h1>The work we do, and the people we help</h1>
+  <GridProjects>
     {
-      allProjects.map((project) => (
-        <li>
-          <a href={`projects/${project.slug}`}>{project.data.name}</a>
-        </li>
+      projects.map((project) => (
+        <ProjectCard
+          type={project.data.type}
+          title={project.data.name}
+          headline={project.data.caption}
+          link={`projects/${project.slug}`}
+          image={project.data.previewImage}
+          color={project.data.color}
+          colorScheme={project.data.colorScheme}
+        />
       ))
     }
-  </ul>
+  </GridProjects>
 </Layout>
