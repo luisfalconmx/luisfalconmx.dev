@@ -14,7 +14,6 @@ type Props = {
   colorScheme?: 'light' | 'dark'
   buttonText?: string
   color?: string
-  gridSpan?: number
 }
 
 const ProjectCard = ({
@@ -26,8 +25,7 @@ const ProjectCard = ({
   target = '_self',
   colorScheme = 'dark',
   buttonText = 'Case study',
-  color = '#FFEFB5',
-  gridSpan
+  color = '#FFEFB5'
 }: Props) => {
   const cardType = `ProjectCard--${type}`
 
@@ -37,8 +35,7 @@ const ProjectCard = ({
     <div
       className={`ProjectCard ${cardType} ${colorPreference}`}
       style={{
-        backgroundColor: color,
-        gridColumn: `span ${gridSpan}`
+        backgroundColor: color
       }}
     >
       <div className="ProjectCard__content">

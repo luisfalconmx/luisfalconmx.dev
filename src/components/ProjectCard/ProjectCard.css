@@ -1,11 +1,11 @@
 /* Large Variant */
 .ProjectCard {
   &--large {
-    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden;
+    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden col-span-3;
   }
 
   &--large &__content {
-    @apply pb-20 items-end max-h-fit place-self-end mt-auto;
+    @apply pb-20 items-end max-h-fit mt-auto;
   }
 
   &--large &__title {
@@ -17,14 +17,14 @@
   }
 
   &--large &__image {
-    @apply block w-full max-h-[420px] object-cover shadow-custom place-self-end mt-auto;
+    @apply block w-full max-h-[420px] h-[420px] object-cover shadow-custom place-self-end mt-auto;
   }
 }
 
 /* Medium Variant */
 .ProjectCard {
   &--medium {
-    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden;
+    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden col-span-2;
   }
 
   &--medium &__content {
@@ -40,18 +40,18 @@
   }
 
   &--medium &__image {
-    @apply shadow-custom place-self-end mt-auto;
+    @apply shadow-custom place-self-end mt-auto h-[320px] w-full;
   }
 }
 
 /* Small Variant */
 .ProjectCard {
   &--small {
-    @apply relative max-w-[370px] w-full min-h-[360px] overflow-hidden;
+    @apply relative max-w-[370px] w-full min-h-[360px] overflow-hidden col-span-1;
   }
 
   &--small &__content {
-    @apply relative w-full h-full z-10 justify-end max-h-fit place-self-end mt-auto bg-[#004aff] bg-opacity-60 px-16 pb-20 pt-3 flex flex-col;
+    @apply relative w-full h-full z-10 justify-end max-h-fit place-self-end mt-auto bg-[#004aff] bg-opacity-80 px-16 pb-20 pt-3 flex flex-col;
   }
 
   &--small &__title {
@@ -63,7 +63,7 @@
   }
 
   &--small &__button {
-    @apply block mx-auto;
+    @apply block mx-auto w-fit shadow;
   }
 
   &--small &__image {
@@ -91,5 +91,15 @@
 
   &--dark &__button {
     @apply border-dark-400;
+  }
+
+  &--small &__title,
+  &--small &__headline,
+  &--small &__button {
+    @apply text-white;
+  }
+
+  &--small &__button {
+    @apply border-white;
   }
 }
