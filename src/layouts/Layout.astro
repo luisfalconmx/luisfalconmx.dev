@@ -34,7 +34,7 @@ const { title, navbarVariant = 'normal' } = Astro.props
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="dark:bg-neutral-900 text-white">
     <Navbar
       variant={navbarVariant}
       links={mainMenu}
@@ -44,5 +44,27 @@ const { title, navbarVariant = 'normal' } = Astro.props
     />
     <slot />
     <Footer />
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return 'light'
+      })()
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+
+      window.localStorage.setItem('theme', theme)
+    </script>
   </body>
 </html>
