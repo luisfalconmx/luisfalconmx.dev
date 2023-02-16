@@ -5,11 +5,12 @@ type Props = {
   type?: 'primary' | 'secondary' | 'transparent'
   children: ReactNode
   className?: string
+  onClick?: () => void
 }
 
-const Button = ({ type = 'primary', children, className }: Props) => {
+const Button = ({ type = 'primary', children, className, onClick }: Props) => {
   return (
-    <button className={`Button Button--${type} ${className}`}>
+    <button className={`Button Button--${type} ${className}`} onClick={onClick}>
       {children}
     </button>
   )

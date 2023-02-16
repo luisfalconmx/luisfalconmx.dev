@@ -1,0 +1,11 @@
+.Paginate {
+  @apply flex mx-auto w-fit items-center;
+
+  &__link {
+    @apply px-3 py-1 text-xl mx-1 rounded-full font-extrabold;
+
+    &--focus {
+      @apply bg-navy-blue text-white;
+    }
+  }
+}
