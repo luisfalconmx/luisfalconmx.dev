@@ -1,0 +1,49 @@
+---
+import { fetchContent } from 'astro'
+import Layout from '../../layouts/Layout.astro'
+import getProjects from '../../utils/getProjects'
+import Paginate from '../../components/Paginate'
+import ProjectCard from '../../components/ProjectCard'
+import GridProjects from '../../components/GridProjects'
+
+export async function getStaticPaths({ paginate }) {
+  const allRecipes = await getProjects()
+  const pageSize = 5
+
+  return paginate(allRecipes, { pageSize })
+}
+
+const { page } = Astro.props
+---
+
+<Layout title="Projects - luisfalconmx">
+  <section class="max-w-[1080px] mx-auto">
+    <h1 class="max-w-[742px] font-extrabold font-manrope text-6xl my-32">
+      The work we do, and the people we help.
+    </h1>
+    <GridProjects>
+      {
+        page.data.map((project) => (
+          <ProjectCard
+            type={project.data.type}
+            title={project.data.name}
+            headline={project.data.caption}
+            link={`projects/${project.slug}`}
+            image={project.data.previewImage}
+            color={project.data.color}
+            colorScheme={project.data.colorScheme}
+          />
+        ))
+      }
+    </GridProjects>
+    <Paginate
+      slug="/projects"
+      size={page.size}
+      total={page.total}
+      currentPage={page.currentPage}
+      lastPage={page.lastPage}
+      prev={page.url.prev}
+      next={page.url.next}
+    />
+  </section>
+</Layout>
