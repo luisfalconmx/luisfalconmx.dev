@@ -3,19 +3,56 @@ import { getCollection } from 'astro:content'
 import getProjects from '../utils/getProjects'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero'
-import ProfilePicture from '../assets/images/profile.png'
-import ProjectCard from '../components/ProjectCard'
 import GridProjects from '../components/GridProjects'
+import ProjectCard from '../components/ProjectCard'
+import ServiceCard from '../components/ServiceCard'
+import ProfilePicture from '../assets/images/profile.png'
+import WebsiteCreationImage from '../assets/images/website-creation.png'
 
-const projects = await getProjects(5);
+const projects = await getProjects(5)
 const posts = await getCollection('blog')
 const yearsOfExperience = 3
+const services = [
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  },
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  },
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  },
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  },
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  },
+  {
+    image: WebsiteCreationImage,
+    title: 'Brand Indentity',
+    description:
+      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
+  }
+]
 ---
 
-<Layout
-  title="luisfalconmx - Frontend Developer"
-  navbarVariant="transparent"
->
+<Layout title="luisfalconmx - Frontend Developer" navbarVariant="transparent">
   <main>
     <Hero
       image={ProfilePicture}
@@ -70,7 +107,8 @@ const yearsOfExperience = 3
         Latest projects 🌈
       </h2>
       <GridProjects>
-        {projects.map((project) => (
+        {
+          projects.map((project) => (
             <ProjectCard
               type={project.data.type}
               title={project.data.name}
@@ -80,8 +118,23 @@ const yearsOfExperience = 3
               color={project.data.color}
               colorScheme={project.data.colorScheme}
             />
-        ))}
+          ))
+        }
       </GridProjects>
+    </section>
+    <section
+      class="max-w-[1170px] mx-auto pt-28 pb-20 border-b border-dark-100"
+    >
+      {
+        services.map((service) => (
+          <ServiceCard
+            key={service.title}
+            image={service.image}
+            title={service.title}
+            description={service.description}
+          />
+        ))
+      }
     </section>
   </main>
 </Layout>
