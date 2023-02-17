@@ -5,7 +5,7 @@
     @apply px-3 py-1 text-xl mx-1 rounded-full font-extrabold;
 
     &--focus {
-      @apply bg-navy-blue text-white;
+      @apply bg-primary text-white;
     }
   }
 }
