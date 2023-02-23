@@ -1,16 +1,16 @@
 ---
-import { fetchContent } from 'astro'
 import Layout from '../../layouts/Layout.astro'
-import getProjects from '../../utils/getProjects'
 import Paginate from '../../components/Paginate'
 import ProjectCard from '../../components/ProjectCard'
 import GridProjects from '../../components/GridProjects'
+import useProjects from '../../hooks/useProjects'
 
-export async function getStaticPaths({ paginate }) {
-  const allRecipes = await getProjects()
+export async function getStaticPaths({ paginate }: any) {
+  const { getAllProjects } = useProjects()
+  const allProjects = await getAllProjects()
   const pageSize = 5
 
-  return paginate(allRecipes, { pageSize })
+  return paginate(allProjects, { pageSize })
 }
 
 const { page } = Astro.props
@@ -23,9 +23,8 @@ const { page } = Astro.props
     </h1>
     <GridProjects>
       {
-        page.data.map((project) => (
+        page.data.map((project: any) => (
           <ProjectCard
-            type={project.data.type}
             title={project.data.name}
             headline={project.data.caption}
             link={`projects/${project.slug}`}
@@ -38,8 +37,6 @@ const { page } = Astro.props
     </GridProjects>
     <Paginate
       slug="/projects"
-      size={page.size}
-      total={page.total}
       currentPage={page.currentPage}
       lastPage={page.lastPage}
       prev={page.url.prev}

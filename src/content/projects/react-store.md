@@ -1,9 +1,9 @@
 ---
 name: 'React Store'
-caption: 'Single Page Application created with React JS'
+caption: '04 de Marzo del 2022'
 client: 'luisfalconmx'
 task: 'UI Design, Web Development, Visual Design'
-publishDate: '2022-01-19'
+publishDate: '2022-03-04'
 link: 'https://thebouncingkoala.vercel.app'
 color: '#5960ff'
 colorScheme: 'light'
