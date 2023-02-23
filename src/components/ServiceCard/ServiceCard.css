@@ -1,15 +1,15 @@
 .ServiceCard {
-  @apply max-w-[370px] shadow-[0_45px_80px_rgba(0,0,0,0.04)] flex flex-col items-center text-center pt-16 pb-12 px-5 bg-white;
+  @apply max-w-[370px] shadow-[0_45px_80px_rgba(0,0,0,0.04)] flex flex-col items-center text-center pt-16 pb-12 px-5 bg-sunlight-soft dark:bg-night-soft;
 
   &__image {
     @apply mb-10 max-w-[80px] max-h-[80px];
   }
 
   &__title {
-    @apply mb-8 font-bold text-2xl text-dark-300 font-manrope;
+    @apply mb-8 font-bold text-2xl text-black dark:text-sunlight-soft font-manrope;
   }
 
   &__description {
-    @apply font-sans font-normal text-base leading-7;
+    @apply font-sans font-normal text-base leading-7 text-dark-300 dark:text-dark-100;
   }
 }
