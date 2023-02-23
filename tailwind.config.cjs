@@ -16,6 +16,14 @@ module.exports = {
           200: '#AAAAB7',
           300: '#404152',
           400: '#060A11'
+        },
+        night: {
+          soft: '#1c1f26',
+          dense: '#0e1217'
+        },
+        sunlight: {
+          soft: '#ffffff',
+          dense: '#f5f8fc'
         }
       },
       fontFamily: {

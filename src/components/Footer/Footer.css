@@ -10,11 +10,11 @@
   }
 
   &__title {
-    @apply font-manrope font-extrabold leading-[5rem] text-dark-400 text-center text-6xl mb-16;
+    @apply font-manrope font-extrabold leading-[5rem] text-dark-400 dark:text-white text-center text-6xl mb-16;
   }
 
   &__separator {
-    @apply mt-36 border-t border-dark-100;
+    @apply mt-36 border-t border-dark-100 dark:border-dark-300;
   }
 
   &__nav {
@@ -42,6 +42,6 @@
   }
 
   &__item-link {
-    @apply cursor-pointer text-dark-300 hover:underline;
+    @apply cursor-pointer text-dark-300 dark:text-dark-200 hover:underline;
   }
 }

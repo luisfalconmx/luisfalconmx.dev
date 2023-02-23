@@ -1,12 +1,12 @@
 .Navbar {
-  @apply w-full py-3 px-16 sticky z-50 transition-all duration-200 bg-white shadow-custom;
+  @apply w-full py-3 px-16 sticky z-50 transition-all duration-200 bg-sunlight-soft dark:bg-night-dense shadow-custom dark:border-b dark:border-dark-300;
 
   &__container {
     @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center;
   }
 
   &__logo {
-    @apply w-[160px] filter invert;
+    @apply w-[160px] filter invert dark:invert-0;
   }
 
   &__nav {
@@ -17,7 +17,7 @@
   }
 
   &__item {
-    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-300;
+    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-300 dark:text-white;
 
     &:hover {
       @apply underline;
@@ -29,7 +29,7 @@
   }
 
   &__button {
-    @apply bg-transparent;
+    @apply bg-transparent dark:text-white dark:border-dark-300;
   }
 
   &__button-link {
@@ -38,15 +38,15 @@
 
   /* TRANSPARENT VARIATION */
   &--transparent {
-    @apply bg-transparent fixed top-0 shadow-none;
+    @apply bg-transparent dark:bg-transparent fixed top-0 shadow-none dark:border-b-0;
   }
 
   &--transparent &__logo {
-    @apply filter invert-0;
+    @apply filter invert-0 dark:invert-0;
   }
 
   &--transparent &__item {
-    @apply text-dark-50;
+    @apply text-dark-50 dark:text-dark-50;
   }
 
   &--transparent &__button {
@@ -60,18 +60,18 @@
   }
 
   &--sticky&--transparent {
-    @apply bg-white shadow-custom;
+    @apply bg-white shadow-custom dark:bg-night-dense dark:border-b;
   }
 
   &--sticky&--transparent &__logo {
-    @apply invert;
+    @apply invert dark:invert-0;
   }
 
   &--sticky&--transparent &__item {
-    @apply text-dark-300;
+    @apply text-dark-300 dark:text-dark-50;
   }
 
   &--sticky&--transparent &__button {
-    @apply border-dark-300 text-dark-300;
+    @apply border-dark-300 text-dark-300 dark:text-dark-50;
   }
 }
