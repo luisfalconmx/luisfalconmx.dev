@@ -1,7 +1,8 @@
 ---
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import mainMenu from '../data/mainMenu'
+import mainMenu from '../config/Menus/mainMenu'
+import socialMenu from '../config/Menus/socialMenu'
 
 export interface Props {
   title: string
@@ -43,7 +44,7 @@ const { title, navbarVariant = 'normal' } = Astro.props
       client:load
     />
     <slot />
-    <Footer />
+    <Footer links={mainMenu} socialLinks={socialMenu} />
     <script is:inline>
       const theme = (() => {
         if (

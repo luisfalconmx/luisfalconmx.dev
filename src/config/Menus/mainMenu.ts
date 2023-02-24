@@ -1,4 +1,4 @@
-import type { Menu } from '../types/Menu'
+import type { Menu } from '../../types/Menu'
 
 const mainMenu: Menu = [
   {
@@ -7,11 +7,7 @@ const mainMenu: Menu = [
   },
   {
     title: 'projects',
-    href: 'projects'
-  },
-  {
-    title: 'blog',
-    href: '/blog'
+    href: '/projects'
   },
   {
     title: 'GitHub',

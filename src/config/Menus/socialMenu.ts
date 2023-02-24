@@ -1,9 +1,9 @@
-import type { SocialMenu } from '../types/SocialMenu'
-import facebookIcon from '../assets/icons/icon-facebook.svg'
-import instagramIcon from '../assets/icons/icon-instagram.svg'
-import twitterIcon from '../assets/icons/icon-twitter.svg'
-import linkedinIcon from '../assets/icons/icon-linkedin.svg'
-import githubIcon from '../assets/icons/icon-github.svg'
+import type { SocialMenu } from '../../types/SocialMenu'
+import facebookIcon from '../../assets/icons/icon-facebook.svg'
+import instagramIcon from '../../assets/icons/icon-instagram.svg'
+import twitterIcon from '../../assets/icons/icon-twitter.svg'
+import linkedinIcon from '../../assets/icons/icon-linkedin.svg'
+import githubIcon from '../../assets/icons/icon-github.svg'
 
 const socialMenu: SocialMenu = [
   {
