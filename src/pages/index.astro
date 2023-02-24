@@ -1,51 +1,14 @@
 ---
-import { getCollection } from 'astro:content'
 import useProjects from '../hooks/useProjects'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero'
 import GridProjects from '../components/GridProjects'
 import ProjectCard from '../components/ProjectCard'
-import ServiceCard from '../components/ServiceCard'
 import ProfilePicture from '../assets/images/profile.png'
-import WebsiteCreationImage from '../assets/images/website-creation.png'
-import GridServices from '../components/GridServices'
 
 const { getLatestProjects } = useProjects()
 const projects = await getLatestProjects()
-const posts = await getCollection('blog')
 const yearsOfExperience = 3
-const services = [
-  {
-    image: WebsiteCreationImage,
-    title: 'Brand Indentity',
-    description:
-      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
-  },
-  {
-    image: WebsiteCreationImage,
-    title: 'Brand Indentity',
-    description:
-      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
-  },
-  {
-    image: WebsiteCreationImage,
-    title: 'Brand Indentity',
-    description:
-      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
-  },
-  {
-    image: WebsiteCreationImage,
-    title: 'Brand Indentity',
-    description:
-      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
-  },
-  {
-    image: WebsiteCreationImage,
-    title: 'Brand Indentity',
-    description:
-      'Strategy formulation is built on the match between all organisation resources and skills based program. Design is the first thing that catches.'
-  }
-]
 ---
 
 <Layout title="luisfalconmx - Frontend Developer" navbarVariant="transparent">
@@ -92,7 +55,7 @@ const services = [
       <div>
         <b
           class="block font-manrope text-6xl font-normal mb-3 text-dark-400 dark:text-white"
-          >{posts.length}</b
+          >10</b
         >
         <strong
           class="block uppercase font-bold font-manrope text-xl text-dark-300 dark:text-dark-200"
@@ -122,7 +85,7 @@ const services = [
         }
       </GridProjects>
     </section>
-    <section class="max-w-[1170px] mx-auto pt-28 pb-20">
+    <!-- <section class="max-w-[1170px] mx-auto pt-28 pb-20">
       <h2
         class="text-center font-manrope font-extrabold text-5xl text-dark-400 dark:text-white mb-24"
       >
@@ -140,6 +103,6 @@ const services = [
           ))
         }
       </GridServices>
-    </section>
+    </section> -->
   </main>
 </Layout>
