@@ -6,9 +6,9 @@ import GridProjects from '../components/GridProjects'
 import ProjectCard from '../components/ProjectCard'
 import ProfilePicture from '../assets/images/profile.png'
 
-const { getLatestProjects } = useProjects()
+const { getLatestProjects, generateOrder } = useProjects()
 const projects = await getLatestProjects()
-const yearsOfExperience = 3
+const order = ['large', 'medium', 'small', 'small', 'medium']
 ---
 
 <Layout title="luisfalconmx - Frontend Developer" navbarVariant="transparent">
@@ -45,7 +45,7 @@ const yearsOfExperience = 3
       <div>
         <b
           class="block font-manrope text-6xl font-normal mb-3 text-dark-400 dark:text-white"
-          >{yearsOfExperience}+</b
+          >3+</b
         >
         <strong
           class="block uppercase font-bold font-manrope text-xl text-dark-300 dark:text-dark-200"
@@ -71,9 +71,10 @@ const yearsOfExperience = 3
       </h2>
       <GridProjects>
         {
-          projects.map((project) => (
+          projects.map((project, key) => (
             <ProjectCard
-              type={project.data.type}
+              key={key}
+              type={generateOrder(order)}
               title={project.data.name}
               headline={project.data.caption}
               link={`projects/${project.slug}`}

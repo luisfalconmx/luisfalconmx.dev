@@ -1,4 +1,5 @@
 import Button from '../Button'
+import type { Key } from 'react'
 import './ProjectCard.css'
 
 type Props = {
@@ -14,6 +15,7 @@ type Props = {
   colorScheme?: 'light' | 'dark'
   buttonText?: string
   color?: string
+  key?: Key
 }
 
 const ProjectCard = ({
