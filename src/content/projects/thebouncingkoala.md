@@ -1,12 +1,12 @@
 ---
 name: 'The Bouncing Koala'
-caption: 'Official website for The Bouncing Koala'
+caption: '23 de enero del 2022'
 client: "Ana d'Argence"
-task: "UI Design, Web Development, Visual Design"
-publishDate: '2023-02-01'
+task: 'UI Design, Web Development, Visual Design'
+publishDate: '2022-01-23'
 link: 'https://thebouncingkoala.vercel.app'
-color: "#8B5CF6"
-colorScheme: "light"
+color: '#8B5CF6'
+colorScheme: 'light'
 previewImage:
   src: 'https://jackcreative.staticmania.com/images/project/project-1.png'
   alt: 'The bouncing koala project preview'

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import getProjects from '../utils/getProjects'
+import useProjects from '../hooks/useProjects'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero'
 import GridProjects from '../components/GridProjects'
@@ -10,7 +10,8 @@ import ProfilePicture from '../assets/images/profile.png'
 import WebsiteCreationImage from '../assets/images/website-creation.png'
 import GridServices from '../components/GridServices'
 
-const projects = await getProjects(5)
+const { getLatestProjects } = useProjects()
+const projects = await getLatestProjects()
 const posts = await getCollection('blog')
 const yearsOfExperience = 3
 const services = [
