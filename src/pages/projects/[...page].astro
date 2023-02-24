@@ -8,7 +8,7 @@ import useProjects from '../../hooks/useProjects'
 export async function getStaticPaths({ paginate }: any) {
   const { getAllProjects } = useProjects()
   const allProjects = await getAllProjects()
-  const pageSize = 5
+  const pageSize = 4
 
   return paginate(allProjects, { pageSize })
 }
@@ -26,6 +26,7 @@ const { page } = Astro.props
         page.data.map((project: any) => (
           <ProjectCard
             title={project.data.name}
+            type="large"
             headline={project.data.caption}
             link={`projects/${project.slug}`}
             image={project.data.previewImage}

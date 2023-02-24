@@ -1,24 +1,43 @@
 import { getCollection } from 'astro:content'
 
-const useProjects = () => {
-  const getLatestProjects = async (limit: number) => {
-    const allProjects = await getCollection('projects')
-    const limitedProjects = allProjects.slice(0, limit)
+type Order = ('large' | 'medium' | 'small')[]
 
-    const orderedProjects = limitedProjects.sort((a: any, b: any) => {
-      const result = a.data.publishDate - b.data.publishDate
-      return result
+const useProjects = () => {
+  const getLatestProjects = async () => {
+    let counter = 0
+    const limit = 5
+    const order: Order = ['large', 'medium', 'small', 'small', 'medium']
+
+    const projects = await getCollection('projects', () => {
+      counter++
+      return counter <= limit
     })
 
-    const latestProjects = orderedProjects.reverse()
+    const orderedProjects = projects.sort((a: any, b: any) => {
+      return a.data.publishDate - b.data.publishDate
+    })
+
+    const reversedProjects = orderedProjects.reverse()
+
+    const latestProjects = reversedProjects.map((project) => {
+      if (counter > order.length) {
+        counter = 0
+      }
+
+      const projectType = order[counter]
+      counter++
+
+      project.data.type = projectType
+      return project
+    })
+
     return latestProjects
   }
 
   const getAllProjects = async () => {
     const projects = await getCollection('projects')
     const orderedProjects = projects.sort((a: any, b: any) => {
-      const result = a.data.publishDate - b.data.publishDate
-      return result
+      return a.data.publishDate - b.data.publishDate
     })
     const allProjects = orderedProjects.reverse()
     return allProjects
