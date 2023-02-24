@@ -1,9 +1,15 @@
-import './Footer.css'
 import Button from '../Button'
-import socialMenu from '../../data/socialMenu'
-import mainMenu from '../../data/mainMenu'
+import mainMenu from '../../config/Menus/mainMenu'
+import type { Menu } from '../../types/Menu'
+import type { SocialMenu } from '../../types/SocialMenu'
+import './Footer.css'
 
-const Footer = () => {
+type Props = {
+  links: Menu
+  socialLinks: SocialMenu
+}
+
+const Footer = ({ links, socialLinks }: Props) => {
   return (
     <footer className="Footer">
       <div className="Footer__container">
@@ -16,7 +22,7 @@ const Footer = () => {
         <div className="Footer__separator"></div>
         <div className="Footer__nav">
           <ul className="Footer__social">
-            {socialMenu.map(({ href, icon, title }, key) => (
+            {socialLinks.map(({ href, icon, title }, key) => (
               <li key={key} className="Footer__social-item">
                 <a className="Footer__social-item-link" href={href}>
                   <img src={icon} alt={title} />
@@ -25,7 +31,7 @@ const Footer = () => {
             ))}
           </ul>
           <ul className="Footer__menu">
-            {mainMenu.map(({ href, title }, key) => (
+            {links.map(({ href, title }, key) => (
               <li key={key} className="Footer__item">
                 <a className="Footer__item-link" href={href}>
                   {title}
