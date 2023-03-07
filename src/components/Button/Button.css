@@ -1,5 +1,9 @@
 .Button {
-  @apply py-[14px] px-[22px] font-sans font-bold leading-6 rounded-lg first-letter:uppercase cursor-pointer hover:scale-105 transition-all ease-linear;
+  @apply py-4 px-6 font-sans font-bold leading-6 rounded-lg first-letter:uppercase cursor-pointer hover:scale-105 transition-all ease-linear flex items-center;
+
+  &__icon {
+    @apply ml-2;
+  }
 
   &--primary {
     @apply bg-primary text-white;

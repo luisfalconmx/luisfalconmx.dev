@@ -29,7 +29,7 @@
   }
 
   &__button {
-    @apply bg-transparent border dark:text-white dark:border-dark-300;
+    @apply bg-transparent border bg-primary dark:text-white dark:border-dark-200/80 py-3 px-5;
   }
 
   &__button-link {
@@ -50,7 +50,7 @@
   }
 
   &--transparent &__button {
-    @apply border-dark-50 text-dark-50;
+    @apply bg-transparent border-dark-200 text-dark-50;
   }
 
   /* STICKY VARIATION */
