@@ -29,7 +29,7 @@
   }
 
   &__button {
-    @apply bg-transparent dark:text-white dark:border-dark-300;
+    @apply bg-transparent border dark:text-white dark:border-dark-300;
   }
 
   &__button-link {
@@ -72,6 +72,6 @@
   }
 
   &--sticky&--transparent &__button {
-    @apply border-dark-300 text-dark-300 dark:text-dark-50;
+    @apply bg-primary border-transparent dark:text-dark-50;
   }
 }
