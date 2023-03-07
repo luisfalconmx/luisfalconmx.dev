@@ -1,8 +1,8 @@
 .Button {
-  @apply py-[14px] px-[22px] font-sans font-bold leading-6 rounded-lg first-letter:uppercase cursor-pointer;
+  @apply py-[14px] px-[22px] font-sans font-bold leading-6 rounded-lg first-letter:uppercase cursor-pointer hover:scale-105 transition-all ease-linear;
 
   &--primary {
-    @apply bg-dark-400 text-white;
+    @apply bg-primary text-white;
   }
 
   &--transparent {
