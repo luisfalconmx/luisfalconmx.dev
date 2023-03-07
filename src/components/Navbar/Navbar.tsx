@@ -65,9 +65,13 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
         </nav>
         <div>
           {darkmode ? (
-            <Sun size={28} onClick={toggleDarkmode} />
+            <button type="button" onClick={toggleDarkmode}>
+              <Sun className="Navbar__icon" size={28} />
+            </button>
           ) : (
-            <Moon size={28} onClick={toggleDarkmode} />
+            <button type="button" onClick={toggleDarkmode}>
+              <Moon className="Navbar__icon" size={28} />
+            </button>
           )}
         </div>
       </div>

@@ -28,12 +28,8 @@
     @apply cursor-pointer;
   }
 
-  &__button {
-    @apply bg-transparent border bg-primary dark:text-white dark:border-dark-200/80 py-3 px-5;
-  }
-
-  &__button-link {
-    @apply w-fit ml-auto block;
+  &__icon {
+    @apply cursor-pointer;
   }
 
   /* TRANSPARENT VARIATION */
@@ -49,8 +45,8 @@
     @apply text-dark-50 dark:text-dark-50;
   }
 
-  &--transparent &__button {
-    @apply bg-transparent border-dark-200 text-dark-50;
+  &--transparent &__icon {
+    @apply text-dark-50 dark:text-dark-50;
   }
 
   /* STICKY VARIATION */
@@ -71,7 +67,7 @@
     @apply text-dark-300 dark:text-dark-50;
   }
 
-  &--sticky&--transparent &__button {
-    @apply bg-primary border-transparent dark:text-dark-50;
+  &--sticky&--transparent &__icon {
+    @apply text-dark-300 dark:text-dark-50;
   }
 }
