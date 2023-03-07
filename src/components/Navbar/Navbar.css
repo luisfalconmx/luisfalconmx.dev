@@ -2,7 +2,7 @@
   @apply w-full py-3 px-16 sticky z-50 transition-all duration-200 bg-sunlight-soft dark:bg-night-dense shadow-custom dark:border-b dark:border-dark-300;
 
   &__container {
-    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center;
+    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center min-h-[55px];
   }
 
   &__logo {
