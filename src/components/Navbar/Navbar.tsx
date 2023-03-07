@@ -70,7 +70,7 @@ const Navbar = ({
           </ul>
         </nav>
         <a href={buttonLink} className="Navbar__button-link">
-          <Button type="secondary" className="Navbar__button">
+          <Button type="primary" icon={true} className="Navbar__button">
             {buttonText}
           </Button>
         </a>

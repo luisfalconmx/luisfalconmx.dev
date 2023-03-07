@@ -17,7 +17,7 @@ const Footer = ({ links, socialLinks }: Props) => {
           <strong className="Footer__title">
             Have a project in mind? Let's get to work.👋📫
           </strong>
-          <Button>Say Hello</Button>
+          <Button icon>Say Hello</Button>
         </div>
         <div className="Footer__separator"></div>
         <div className="Footer__nav">
