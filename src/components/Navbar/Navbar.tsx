@@ -20,7 +20,7 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
   const toggleMenu = () => setMenuActive(!menuActive)
 
   const toggleSticky = () => {
-    const stickyTrigger = 100
+    const stickyTrigger = 50
     const getScroll = window.scrollY
 
     if (getScroll > stickyTrigger) {

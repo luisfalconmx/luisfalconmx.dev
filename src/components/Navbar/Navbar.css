@@ -58,12 +58,20 @@
     @apply filter invert-0 dark:invert-0;
   }
 
+  &--transparent &__nav {
+    @apply lg:bg-transparent;
+  }
+
   &--transparent &__item {
-    @apply text-dark-50 dark:text-dark-50;
+    @apply lg:text-dark-50 dark:text-dark-50;
   }
 
   &--transparent &__icon {
     @apply text-dark-50 dark:text-dark-50;
+  }
+
+  &--transparent &__menu {
+    @apply text-dark-50;
   }
 
   /* STICKY VARIATION */
@@ -85,6 +93,10 @@
   }
 
   &--sticky&--transparent &__icon {
+    @apply text-dark-300 dark:text-dark-50;
+  }
+
+  &--sticky&--transparent &__menu {
     @apply text-dark-300 dark:text-dark-50;
   }
 }
