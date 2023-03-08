@@ -43,7 +43,7 @@ const ProjectCard = ({
       <div className="ProjectCard__content">
         <h3 className="ProjectCard__title">{title}</h3>
         <span className="ProjectCard__headline">{headline}</span>
-        <a href={link} target={target}>
+        <a href={link} className="ProjectCard__link" target={target}>
           <Button type="secondary" className="ProjectCard__button">
             {buttonText}
           </Button>

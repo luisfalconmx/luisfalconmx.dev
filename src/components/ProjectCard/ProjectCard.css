@@ -1,46 +1,62 @@
 /* Large Variant */
 .ProjectCard {
   &--large {
-    @apply pt-[59px] pr-[57px] pl-[60px] max-w-[1170px] w-full grid grid-cols-[1fr,540px] gap-x-6 min-h-[400px] overflow-hidden col-span-3;
+    @apply lg:pt-[59px] lg:pr-[57px] lg:pl-[60px] lg:max-w-[1170px] w-full grid lg:grid-cols-[1fr,540px] gap-x-6 lg:min-h-[400px] max-w-[370px] min-h-[360px] overflow-hidden col-span-1 lg:col-span-3 relative;
   }
 
   &--large &__content {
-    @apply pb-20 items-end max-h-fit mt-auto;
+    @apply relative lg:static flex flex-col lg:block w-full h-full lg:h-fit z-10 pb-20 justify-end lg:justify-start lg:items-end place-self-end lg:place-self-start max-h-fit mt-auto bg-primary bg-opacity-80 lg:bg-transparent lg:bg-opacity-0;
   }
 
   &--large &__title {
-    @apply font-manrope font-extrabold text-5xl text-dark-400 mb-5 leading-[3.75rem];
+    @apply lg:font-manrope font-semibold lg:font-extrabold text-xl lg:text-5xl text-dark-50 lg:text-dark-400 mb-3 lg:mb-5 leading-6 lg:leading-[3.75rem] text-center lg:text-left;
   }
 
   &--large &__headline {
-    @apply block font-normal text-dark-300 text-base mb-20;
+    @apply block font-normal text-dark-50 lg:text-dark-300 text-base mb-10 lg:mb-20 text-center lg:text-left;
   }
 
   &--large &__image {
-    @apply block w-full max-h-[420px] h-[420px] object-cover shadow-custom place-self-end mt-auto;
+    @apply block absolute lg:static top-0 left-0 w-full max-h-[420px] h-full lg:h-[420px] object-cover shadow-custom place-self-end mt-auto;
+  }
+
+  &--large &__link {
+    @apply block w-fit mx-auto lg:mx-0;
+  }
+
+  &--large &__button {
+    @apply block w-fit shadow;
   }
 }
 
 /* Medium Variant */
 .ProjectCard {
   &--medium {
-    @apply pt-[30px] pr-[30px] pl-[50px] max-w-[770px] w-full grid grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden col-span-2;
+    @apply lg:pt-[30px] lg:pr-[30px] lg:pl-[50px] max-w-[370px] lg:max-w-[770px] w-full grid grid-cols-1 lg:grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden col-span-1 lg:col-span-2 relative lg:static;
   }
 
   &--medium &__content {
-    @apply pb-20 items-end max-h-fit place-self-end mt-auto;
+    @apply items-end max-h-fit place-self-end lg:place-self-start mt-auto relative lg:static w-full lg:w-fit h-full lg:h-fit z-10 justify-end lg:justify-start bg-primary lg:bg-transparent bg-opacity-80 lg:bg-opacity-100 px-16 lg:px-0 pb-20 lg:pb-0 pt-3 lg:pt-0 flex flex-col lg:block lg:mb-auto;
   }
 
   &--medium &__title {
-    @apply font-manrope font-extrabold text-2xl text-dark-400 mb-5 leading-7;
+    @apply lg:font-manrope font-semibold lg:font-extrabold text-xl lg:text-2xl text-dark-50 lg:text-dark-400 text-center lg:text-left mb-3 lg:mb-5 leading-6 lg:leading-7 mx-auto lg:mx-0;
   }
 
   &--medium &__headline {
-    @apply block font-normal text-dark-300 text-base mb-10;
+    @apply block font-normal text-dark-50 lg:text-dark-300 text-base mb-10 text-center lg:text-left mx-auto lg:mx-0;
   }
 
   &--medium &__image {
-    @apply shadow-custom place-self-end mt-auto h-[320px] w-full;
+    @apply shadow-custom place-self-end mt-auto h-full lg:h-[320px] w-full absolute lg:static top-0 left-0 object-cover lg:object-fill;
+  }
+
+  &--medium &__link {
+    @apply block w-fit mx-auto lg:mx-0;
+  }
+
+  &--medium &__button {
+    @apply block w-fit shadow border-dark-50 text-dark-50;
   }
 }
 
@@ -60,6 +76,10 @@
 
   &--small &__headline {
     @apply block font-normal text-dark-50 text-base mb-10 text-center;
+  }
+
+  &--small &__link {
+    @apply block w-fit mx-auto lg:mx-0;
   }
 
   &--small &__button {
@@ -86,11 +106,11 @@
   &--dark &__title,
   &--dark &__headline,
   &--dark &__button {
-    @apply text-dark-400;
+    @apply lg:text-dark-400;
   }
 
   &--dark &__button {
-    @apply border-dark-400;
+    @apply lg:border-dark-400;
   }
 
   &--small &__title,
