@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import Button from '../Button'
 import Logo from '../../assets/images/logo.svg'
+import { Sun, Moon } from 'react-feather'
+import useDarkmode from '../../hooks/useDarkmode'
 import type { Menu } from '../../types/Menu'
 import './Navbar.css'
 
@@ -8,19 +9,12 @@ type Props = {
   variant: 'normal' | 'transparent'
   logoUrl?: string
   links: Menu
-  buttonLink: string
-  buttonText: string
 }
 
-const Navbar = ({
-  variant = 'normal',
-  logoUrl,
-  links,
-  buttonLink,
-  buttonText
-}: Props) => {
+const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
   const [sticky, setSticky] = useState(false)
   const [siteUrl, setSiteUrl] = useState(logoUrl)
+  const { darkmode, toggleDarkmode } = useDarkmode()
 
   const toggleSticky = () => {
     const stickyTrigger = 100
@@ -69,11 +63,17 @@ const Navbar = ({
               ))}
           </ul>
         </nav>
-        <a href={buttonLink} className="Navbar__button-link">
-          <Button type="primary" icon={true} className="Navbar__button">
-            {buttonText}
-          </Button>
-        </a>
+        <div>
+          {darkmode ? (
+            <button type="button" onClick={toggleDarkmode}>
+              <Sun className="Navbar__icon" size={28} />
+            </button>
+          ) : (
+            <button type="button" onClick={toggleDarkmode}>
+              <Moon className="Navbar__icon" size={28} />
+            </button>
+          )}
+        </div>
       </div>
     </header>
   )
