@@ -37,8 +37,8 @@ const { title, navbarVariant = 'normal' } = Astro.props
   </head>
   <body class="dark:bg-night-dense dark:text-white">
     <Navbar variant={navbarVariant} links={mainMenu} client:only />
-    <slot />
-    <Footer links={mainMenu} socialLinks={socialMenu} />
+    <!-- <slot />
+    <Footer links={mainMenu} socialLinks={socialMenu} /> -->
     <script is:inline>
       const theme = (() => {
         if (
