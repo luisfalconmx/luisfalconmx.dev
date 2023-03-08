@@ -42,7 +42,7 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
 
   return (
     <header
-      className={`Navbar Navbar--${variant} ${sticky && 'Navbar--sticky'}`}
+      className={`Navbar Navbar--${variant} ${sticky ? 'Navbar--sticky' : ''}`}
       id="navbar"
     >
       <div className="Navbar__container">
