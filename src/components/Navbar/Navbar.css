@@ -22,7 +22,7 @@
   }
 
   &__item {
-    @apply mb-6 lg:mb-0 lg:mr-10 first-letter:uppercase text-4xl font-semibold lg:text-base cursor-pointer lg:font-normal text-dark-300 dark:text-white;
+    @apply mb-6 lg:mb-0 lg:mr-10 first-letter:uppercase text-4xl font-semibold lg:text-base cursor-pointer lg:font-normal text-dark-400 dark:text-white;
 
     &:hover {
       @apply underline;
@@ -55,7 +55,7 @@
   }
 
   &--transparent &__logo {
-    @apply filter invert-0 dark:invert-0;
+    @apply filter dark:invert-0;
   }
 
   &--transparent &__nav {
@@ -63,15 +63,15 @@
   }
 
   &--transparent &__item {
-    @apply lg:text-dark-50 dark:text-dark-50;
+    @apply dark:text-dark-50;
   }
 
   &--transparent &__icon {
-    @apply text-dark-50 dark:text-dark-50;
+    @apply dark:text-dark-50;
   }
 
   &--transparent &__menu {
-    @apply text-dark-50;
+    @apply dark:text-dark-50;
   }
 
   /* STICKY VARIATION */
@@ -89,14 +89,14 @@
   }
 
   &--sticky&--transparent &__item {
-    @apply text-dark-300 dark:text-dark-50;
+    @apply text-dark-400 dark:text-dark-50;
   }
 
   &--sticky&--transparent &__icon {
-    @apply text-dark-300 dark:text-dark-50;
+    @apply text-dark-400 dark:text-dark-50;
   }
 
   &--sticky&--transparent &__menu {
-    @apply text-dark-300 dark:text-dark-50;
+    @apply text-dark-400 dark:text-dark-50;
   }
 }
