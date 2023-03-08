@@ -7,9 +7,10 @@ import socialMenu from '../config/Menus/socialMenu'
 export interface Props {
   title: string
   navbarVariant?: 'normal' | 'transparent'
+  showCTA?: boolean
 }
 
-const { title, navbarVariant = 'normal' } = Astro.props
+const { title, navbarVariant = 'normal', showCTA = true } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ const { title, navbarVariant = 'normal' } = Astro.props
   <body class="dark:bg-night-dense dark:text-white">
     <Navbar variant={navbarVariant} links={mainMenu} client:only />
     <slot />
-    <Footer links={mainMenu} socialLinks={socialMenu} />
+    <Footer links={mainMenu} socialLinks={socialMenu} showCTA={showCTA} />
     <script is:inline>
       const theme = (() => {
         if (

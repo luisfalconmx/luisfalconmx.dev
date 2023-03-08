@@ -1,5 +1,5 @@
 .Hero {
-  @apply bg-dark-400 text-white min-h-[790px] flex relative overflow-hidden;
+  @apply dark:bg-dark-400 bg-dark-50 text-dark-400 dark:text-white min-h-[790px] flex relative overflow-hidden;
 
   &__container {
     @apply max-w-[1170px] mx-auto my-auto relative z-10;
@@ -14,15 +14,15 @@
   }
 
   &__title {
-    @apply max-w-[480px] mx-auto text-6xl font-extrabold mb-4 font-manrope leading-[72px];
+    @apply max-w-[480px] mx-auto text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 font-manrope leading-relaxed lg:leading-[72px] px-12 lg:px-0;
   }
 
   &__headline {
-    @apply text-2xl font-bold text-dark-100 mb-2 block;
+    @apply text-2xl font-medium lg:font-bold text-dark-400 dark:text-dark-100 mb-4 lg:mb-2 block;
   }
 
   &__description {
-    @apply text-xl text-dark-100;
+    @apply text-xl text-dark-300 dark:text-dark-100 px-6 lg:px-0;
   }
 
   &__decorator-1 {

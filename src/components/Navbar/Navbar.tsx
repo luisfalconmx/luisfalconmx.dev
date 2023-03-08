@@ -1,23 +1,26 @@
 import { useState, useEffect } from 'react'
 import Logo from '../../assets/images/logo.svg'
-import { Sun, Moon } from 'react-feather'
+import { Menu, X, Sun, Moon } from 'react-feather'
 import useDarkmode from '../../hooks/useDarkmode'
-import type { Menu } from '../../types/Menu'
+import type { Menu as MenuType } from '../../types/Menu'
 import './Navbar.css'
 
 type Props = {
   variant: 'normal' | 'transparent'
   logoUrl?: string
-  links: Menu
+  links: MenuType
 }
 
 const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
   const [sticky, setSticky] = useState(false)
   const [siteUrl, setSiteUrl] = useState(logoUrl)
+  const [menuActive, setMenuActive] = useState(false)
   const { darkmode, toggleDarkmode } = useDarkmode()
 
+  const toggleMenu = () => setMenuActive(!menuActive)
+
   const toggleSticky = () => {
-    const stickyTrigger = 100
+    const stickyTrigger = 50
     const getScroll = window.scrollY
 
     if (getScroll > stickyTrigger) {
@@ -39,19 +42,19 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
 
   return (
     <header
-      className={`Navbar Navbar--${variant} ${sticky && 'Navbar--sticky'}`}
+      className={`Navbar Navbar--${variant} ${sticky ? 'Navbar--sticky' : ''}`}
       id="navbar"
     >
       <div className="Navbar__container">
         <a href={siteUrl}>
-          <img
-            width="160px"
-            className="Navbar__logo"
-            src={Logo}
-            alt="luisfalconmx logo"
-          />
+          <img className="Navbar__logo" src={Logo} alt="luisfalconmx logo" />
         </a>
-        <nav className="Navbar__nav">
+        <nav
+          className={`Navbar__nav ${menuActive ? 'Navbar__nav--active' : ''}`}
+        >
+          <button className="Navbar__x" type="button" onClick={toggleMenu}>
+            <X size={32} />
+          </button>
           <ul className="Navbar__list">
             {links &&
               links.map(({ href, title }, key) => (
@@ -63,7 +66,7 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
               ))}
           </ul>
         </nav>
-        <div>
+        <div className="Navbar__actions">
           {darkmode ? (
             <button type="button" onClick={toggleDarkmode}>
               <Sun className="Navbar__icon" size={28} />
@@ -73,6 +76,9 @@ const Navbar = ({ variant = 'normal', logoUrl, links }: Props) => {
               <Moon className="Navbar__icon" size={28} />
             </button>
           )}
+          <button className="Navbar__menu" type="button" onClick={toggleMenu}>
+            <Menu size={32} />
+          </button>
         </div>
       </div>
     </header>

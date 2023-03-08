@@ -4,10 +4,14 @@ import Button from '../components/Button'
 import Illustration from '../assets/images/404-illustration.png'
 ---
 
-<Layout title="404 Not found">
-  <section class="flex flex-col items-center justify-center min-h-[600px]">
+<Layout title="404 Not found" showCTA={false}>
+  <section
+    class="flex flex-col px-9 lg:px-0 items-center justify-center min-h-[300px] mt-12 lg:mt-0 lg:min-h-[600px]"
+  >
     <img src={Illustration} alt="" class="mb-4 dark:invert" />
-    <strong class="text-4xl mb-7">Something is wrong!</strong>
-    <Button className="w-fit">Go to home</Button>
+    <strong class="text-3xl lg:text-4xl mb-7">Something is wrong!</strong>
+    <a href="/">
+      <Button className="w-fit">Go to home</Button>
+    </a>
   </section>
 </Layout>

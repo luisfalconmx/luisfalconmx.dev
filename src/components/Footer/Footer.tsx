@@ -5,20 +5,23 @@ import type { SocialMenu } from '../../types/SocialMenu'
 import './Footer.css'
 
 type Props = {
+  showCTA?: boolean
   links: Menu
   socialLinks: SocialMenu
 }
 
-const Footer = ({ links, socialLinks }: Props) => {
+const Footer = ({ showCTA = true, links, socialLinks }: Props) => {
   return (
     <footer className="Footer">
       <div className="Footer__container">
-        <div className="Footer__content">
-          <strong className="Footer__title">
-            Have a project in mind? Let's get to work.👋📫
-          </strong>
-          <Button icon>Say Hello</Button>
-        </div>
+        {showCTA && (
+          <div className="Footer__content">
+            <strong className="Footer__title">
+              Have a project in mind? Let's get to work.👋📫
+            </strong>
+            <Button icon>Say Hello</Button>
+          </div>
+        )}
         <div className="Footer__separator"></div>
         <div className="Footer__nav">
           <ul className="Footer__social">

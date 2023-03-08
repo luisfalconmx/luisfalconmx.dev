@@ -1,23 +1,28 @@
 .Navbar {
-  @apply w-full py-3 px-16 sticky z-50 transition-all duration-200 bg-sunlight-soft dark:bg-night-dense shadow-custom dark:border-b dark:border-dark-300;
+  @apply w-full py-3 px-6 lg:px-16 sticky top-0 z-50 bg-sunlight-soft dark:bg-night-dense shadow-custom dark:border-b dark:border-dark-300;
 
   &__container {
-    @apply max-w-[1170px] mx-auto grid grid-cols-[auto,1fr,auto] gap-x-16 items-center min-h-[55px];
+    @apply max-w-[1170px] mx-auto grid grid-cols-[1fr,auto] lg:grid-cols-[auto,1fr,auto] gap-x-16 items-center min-h-[55px];
   }
 
   &__logo {
-    @apply w-[160px] filter invert dark:invert-0;
+    @apply w-full max-w-[240px] lg:max-w-[160px] m-0 lg:w-[160px] lg:h-fit filter invert dark:invert-0;
   }
 
   &__nav {
+    @apply fixed flex flex-col lg:flex-row lg:static w-screen lg:w-fit h-screen lg:h-fit bg-white dark:bg-night-dense lg:bg-transparent left-full top-0 px-8 py-10 lg:px-0 lg:py-0 transition-[left] ease-in-out duration-500 z-50;
+
+    &--active {
+      @apply left-0;
+    }
   }
 
   &__list {
-    @apply flex items-center;
+    @apply flex flex-col lg:flex-row lg:items-center;
   }
 
   &__item {
-    @apply mr-10 first-letter:uppercase cursor-pointer font-normal text-dark-300 dark:text-white;
+    @apply mb-6 lg:mb-0 lg:mr-10 first-letter:uppercase text-4xl font-semibold lg:text-base cursor-pointer lg:font-normal text-dark-400 dark:text-white;
 
     &:hover {
       @apply underline;
@@ -28,8 +33,20 @@
     @apply cursor-pointer;
   }
 
+  &__actions {
+    @apply flex justify-end;
+  }
+
   &__icon {
     @apply cursor-pointer;
+  }
+
+  &__menu {
+    @apply lg:hidden cursor-pointer ml-4 w-fit;
+  }
+
+  &__x {
+    @apply mb-11 cursor-pointer lg:hidden w-fit;
   }
 
   /* TRANSPARENT VARIATION */
@@ -38,15 +55,23 @@
   }
 
   &--transparent &__logo {
-    @apply filter invert-0 dark:invert-0;
+    @apply filter dark:invert-0;
+  }
+
+  &--transparent &__nav {
+    @apply lg:bg-transparent;
   }
 
   &--transparent &__item {
-    @apply text-dark-50 dark:text-dark-50;
+    @apply dark:text-dark-50;
   }
 
   &--transparent &__icon {
-    @apply text-dark-50 dark:text-dark-50;
+    @apply dark:text-dark-50;
+  }
+
+  &--transparent &__menu {
+    @apply dark:text-dark-50;
   }
 
   /* STICKY VARIATION */
@@ -64,10 +89,14 @@
   }
 
   &--sticky&--transparent &__item {
-    @apply text-dark-300 dark:text-dark-50;
+    @apply text-dark-400 dark:text-dark-50;
   }
 
   &--sticky&--transparent &__icon {
-    @apply text-dark-300 dark:text-dark-50;
+    @apply text-dark-400 dark:text-dark-50;
+  }
+
+  &--sticky&--transparent &__menu {
+    @apply text-dark-400 dark:text-dark-50;
   }
 }

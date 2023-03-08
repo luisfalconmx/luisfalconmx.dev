@@ -1,5 +1,5 @@
 .Footer {
-  @apply mt-28 pb-20;
+  @apply mt-12 lg:mt-24 pb-20;
 
   &__container {
     @apply max-w-[1256px] mx-auto;
@@ -10,19 +10,19 @@
   }
 
   &__title {
-    @apply font-manrope font-extrabold leading-[5rem] text-dark-400 dark:text-white text-center text-6xl mb-16;
+    @apply font-manrope font-extrabold lg:leading-[5rem] text-dark-400 dark:text-white text-center px-10 lg:px-0 text-2xl md:text-5xl lg:text-6xl mb-8 lg:mb-16;
   }
 
   &__separator {
-    @apply mt-36 border-t border-dark-100 dark:border-dark-300;
+    @apply mt-16 lg:mt-36 border-t border-dark-100 dark:border-dark-300;
   }
 
   &__nav {
-    @apply mt-16 px-20 flex justify-between;
+    @apply mt-16 px-20 flex flex-col-reverse lg:flex-row justify-between;
   }
 
   &__social {
-    @apply flex;
+    @apply flex justify-center lg:justify-start;
   }
 
   &__social-item {
@@ -34,14 +34,14 @@
   }
 
   &__menu {
-    @apply flex;
+    @apply flex flex-col md:flex-row items-center md:items-start md:justify-center mb-14 lg:mb-0;
   }
 
   &__item {
-    @apply mr-10 first-letter:uppercase last-of-type:mr-0;
+    @apply mb-4 md:mr-10 first-letter:uppercase last-of-type:mb-0 md:last-of-type:mr-0;
   }
 
   &__item-link {
-    @apply cursor-pointer text-dark-300 dark:text-dark-200 hover:underline;
+    @apply cursor-pointer text-dark-300 dark:text-dark-200 hover:underline text-xl lg:text-base;
   }
 }
