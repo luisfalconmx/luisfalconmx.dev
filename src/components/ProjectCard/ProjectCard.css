@@ -79,7 +79,7 @@
   }
 
   &--small &__link {
-    @apply block w-fit mx-auto lg:mx-0;
+    @apply block w-fit mx-auto;
   }
 
   &--small &__button {

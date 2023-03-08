@@ -20,7 +20,7 @@ const order = ['large', 'medium', 'small', 'small', 'medium']
       description="I'm passionate about JavaScript, open source projects and the dev communities."
     />
     <section
-      class="grid grid-cols-1 lg:grid-cols-[repeat(4,auto)] gap-y-14 lg:gap-y-0 place-items-center lg:place-items-start gap-x-8 2xl:gap-x-16 max-w-[1170px] mx-auto pt-14 lg:pt-28 pb-20 border-b border-dark-100 dark:border-dark-300"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(4,auto)] gap-y-14 lg:gap-y-0 place-items-center lg:place-items-start gap-x-8 2xl:gap-x-16 max-w-[1170px] mx-auto pt-14 lg:pt-28 pb-20 border-b border-dark-100 dark:border-dark-300"
     >
       <div class="text-center lg:text-left">
         <b
@@ -84,6 +84,7 @@ const order = ['large', 'medium', 'small', 'small', 'medium']
               image={project.data.previewImage}
               color={project.data.color}
               colorScheme={project.data.colorScheme}
+              buttonText="View Project"
             />
           ))
         }

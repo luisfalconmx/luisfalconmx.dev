@@ -14,7 +14,7 @@
   }
 
   &__title {
-    @apply max-w-[480px] mx-auto text-4xl lg:text-6xl font-extrabold mb-4 font-manrope leading-relaxed lg:leading-[72px] px-12 lg:px-0;
+    @apply max-w-[480px] mx-auto text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 font-manrope leading-relaxed lg:leading-[72px] px-12 lg:px-0;
   }
 
   &__headline {
