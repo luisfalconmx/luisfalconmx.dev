@@ -1,7 +1,7 @@
 /* Large Variant */
 .ProjectCard {
   &--large {
-    @apply lg:pt-[59px] lg:pr-[57px] lg:pl-[60px] lg:max-w-[1170px] w-full grid lg:grid-cols-[1fr,540px] gap-x-6 lg:min-h-[400px] max-w-[370px] min-h-[360px] overflow-hidden col-span-1 lg:col-span-3 relative;
+    @apply lg:pt-[59px] lg:pr-[57px] lg:pl-[40px] lg:max-w-[1170px] w-full grid lg:grid-cols-[1fr,640px] gap-x-4 lg:min-h-[400px] max-w-[370px] min-h-[360px] overflow-hidden col-span-1 lg:col-span-3 relative;
   }
 
   &--large &__content {
@@ -17,7 +17,7 @@
   }
 
   &--large &__image {
-    @apply block absolute lg:static top-0 left-0 w-full max-h-[420px] h-full lg:h-[420px] object-cover shadow-custom place-self-end mt-auto;
+    @apply block absolute lg:static top-0 left-0 w-full h-full max-h-[500px] object-cover lg:object-fill shadow-custom place-self-end mt-auto;
   }
 
   &--large &__link {
@@ -32,7 +32,7 @@
 /* Medium Variant */
 .ProjectCard {
   &--medium {
-    @apply lg:pt-[30px] lg:pr-[30px] lg:pl-[50px] max-w-[370px] lg:max-w-[770px] w-full grid grid-cols-1 lg:grid-cols-[1fr,360px] gap-x-3 min-h-[360px] overflow-hidden col-span-1 lg:col-span-2 relative lg:static;
+    @apply lg:pt-[30px] lg:pr-[30px] lg:pl-[30px] max-w-[370px] lg:max-w-[770px] w-full grid grid-cols-1 lg:grid-cols-[1fr,440px] gap-x-3 min-h-[360px] overflow-hidden col-span-1 lg:col-span-2 relative lg:static;
   }
 
   &--medium &__content {
@@ -48,7 +48,7 @@
   }
 
   &--medium &__image {
-    @apply shadow-custom place-self-end mt-auto h-full lg:h-[320px] w-full absolute lg:static top-0 left-0 object-cover lg:object-fill;
+    @apply shadow-custom place-self-end mt-auto h-full lg:max-h-[320px] w-full absolute lg:static top-0 left-0 object-cover lg:object-fill;
   }
 
   &--medium &__link {
