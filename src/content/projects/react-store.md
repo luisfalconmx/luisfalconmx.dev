@@ -1,18 +1,18 @@
 ---
 name: 'React Store'
-caption: '04 de Marzo del 2022'
+caption: 'Single Page Application created with React, React Router, PostCSS and Webpack'
 client: 'luisfalconmx'
-task: 'UI Design, Web Development, Visual Design'
-publishDate: '2022-03-04'
-link: 'https://thebouncingkoala.vercel.app'
+task: 'Ecommerce App, Single Page Application'
+publishDate: '2022-01-27'
+link: 'https://react-store-lyart.vercel.app'
 color: '#5960ff'
 colorScheme: 'light'
 previewImage:
-  src: 'https://jackcreative.staticmania.com/images/project/project-5.png'
-  alt: 'The bouncing koala project preview'
+  src: 'https://raw.githubusercontent.com/luisfalconmx/react-store/main/.github/screenshot.png'
+  alt: 'React store project preview'
 featuredImage:
-  src: 'https://media.licdn.com/dms/image/C4E16AQFDFKfA6yrjQg/profile-displaybackgroundimage-shrink_200_800/0/1654300215325?e=2147483647&v=beta&t=2iAV0PzHG6RvD3_K7d5b7v6dmKm8s-YXbzgAdf_yMco'
-  alt: 'The bouncing koala featured image'
+  src: ''
+  alt: 'React store featured image'
 ---
 
-This is the content for the project The Bouncing Koala
+This is the content for the project
