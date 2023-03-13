@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.17.2",
-    "@astrojs/react": "^2.0.2",
+    "@astrojs/react": "^2.1.0",
     "@astrojs/tailwind": "^3.0.1",
     "@nanostores/persistent": "^0.7.0",
     "@nanostores/react": "^0.4.1",
